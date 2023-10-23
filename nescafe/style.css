@@ -1,0 +1,157 @@
+@font-face {
+    font-family:"DoppioOne-Regular";
+    src: url("font/DoppioOne-Regular.ttf");
+}
+@font-face {
+    font-family:"LeagueGothic-Regular";
+    src: url("font/LeagueGothic-Regular.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#5a5858,#000000);
+}
+header{
+    display: flex;
+    align-items: center;
+    padding: 40px 100px;
+}
+header ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+header ul li{
+    font-family:"DoppioOne-Regular";
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+    padding-bottom: 20px;
+    position: relative;
+}
+li.logo img {
+    width: 150px;
+    object-fit: contain;
+}
+header ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0px;
+    margin: auto;
+    height: 5px;
+    background: #fff;
+}
+header ul li:hover::after{
+width: 5px;
+}
+header ul li.logo::after{
+    display: none;
+}
+.coffee-section {
+    background-image: url(img/background.png);
+    width: 100%;
+    height: 75vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#title{
+    font-family:"LeagueGothic-Regular";
+    font-weight: 400;
+    font-size: 270px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.bottle-img {
+    position: absolute;
+}
+img#mainimg {
+    width: 350px;
+}
+.button-container {
+    width: 40%;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+button {
+    font-family: "DoppioOne-Regular";
+    font-weight:400;
+    font-size: 20px;
+    color: #fff;
+    padding: 15px 20px;
+    background: transparent;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+}
+.button{
+    position: relative;
+}
+.button span{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    background:#fff;
+    z-index: -1;
+    transition: 0.5s;
+}
+.button:hover span {
+    width: 100%;
+}
+.button:hover button{
+    color: black;
+}
+.bottle-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    padding-top: 5px;
+}
+.smallimg{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+.image{
+    opacity: .3;
+    cursor: pointer;
+    transition: .3s linear;
+}
+.image:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.image:nth-child(4){
+    opacity: 1;
+    transform: scale(1.1); 
+}
+.hero-section{
+    background-image: url("img/coffee-bean.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+}

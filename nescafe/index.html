@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nescafe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li>about</li>
+            <li>products</li>
+            <li class="logo"><img src="img/logo.png" alt=""></li>
+            <li>stores</li>
+            <li>contact</li>
+        </ul>
+    </header>
+    <div class="hero-section">
+        <div class="coffee-section">
+            <h1 id="title">black roast</h1>
+
+            <div class="bottle-img">
+                <img src="img/black1.png" alt="" id="mainimg">
+            </div>
+
+            <div class="button-container">
+                <div class="button">
+                    <span></span>
+                    <button>find in store</button>
+                </div>
+                <div class="button">
+                    <span></span>
+                    <button>more details</button>
+                </div>
+            </div>
+        </div>
+        <div class="bottle-container">
+            <div class="image">
+                <img src="img/coffee.png" alt="" class="smallimg">
+            </div>
+            <div class="image">
+                <img src="img/blue.png" alt="" class="smallimg">
+            </div>
+            <div class="image">
+                <img src="img/orange.png" alt="" class="smallimg">
+            </div>
+            <div class="image">
+                <img src="img/black1.png" alt="" class="smallimg">
+            </div>
+        </div>
+    </div>
+    <script>
+       var mainimg = document.getElementById("mainimg");
+        var smallimg = document.getElementsByClassName("smallimg");
+        smallimg[0].onclick = function(){
+            mainimg.src = smallimg[0].src;
+            document.getElementById("title").innerHTML = "cafe choco";
+            document.body.style.background = 'linear-gradient(rgb(64 32 21), rgb(124 82 55))';
+        }
+        smallimg[1].onclick = function(){
+            mainimg.src = smallimg[1].src;
+            document.getElementById("title").innerHTML = "cafe vanilla";
+            document.body.style.background = 'linear-gradient(rgb(81 157 212 / 75%), rgb(23 77 117))';
+        }
+        smallimg[2].onclick = function(){
+            mainimg.src = smallimg[2].src;
+            document.getElementById("title").innerHTML = "the original";
+            document.body.style.background = 'linear-gradient(#f09159,#cc5721)';
+        }
+        smallimg[3].onclick = function(){
+            mainimg.src = smallimg[3].src;
+            document.getElementById("title").innerHTML = "black roast";
+            document.body.style.background = 'linear-gradient(#5a5858,#000000)';
+        }
+    </script>
+    <script src="jquery.js"></script>
+</body>
+</html>
